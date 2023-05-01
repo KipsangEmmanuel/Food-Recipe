@@ -35,7 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ARAWA MENU</h1>
+      <h1>ARAWA <i>food</i> MENU</h1>
+      <h3><i>....Fell free to search for any food you like....</i></h3>
       <h3>Made by: <i class="san"><a href='https://www.linkedin.com/in/emmanuel-kipsang-b16951241/'>Kipsang</a></i></h3>
       <form onSubmit={getSearch} className="search-form">
         <input 

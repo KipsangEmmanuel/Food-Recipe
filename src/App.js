@@ -35,7 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <h1>ARAWA MENU</h1>
+      <h3>Made by: <i class="san"><a href='https://www.linkedin.com/in/emmanuel-kipsang-b16951241/'>Kipsang</a></i></h3>
       <form onSubmit={getSearch} className="search-form">
         <input 
         className='search-bar' 
@@ -47,14 +48,17 @@ function App() {
           Search
         </button>
       </form>
-      {recipes.map(recipe => (
-        <Recipe 
-          title={recipe.recipe.label} 
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-          // ingredients={recipe.recipe.ingredients}
-          />
-      ))}
+      <div className='recipes'>
+        {recipes.map(recipe => (
+          <Recipe 
+            title={recipe.recipe.label} 
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
+            // ingredients={recipe.recipe.ingredients}
+            />
+        ))}
+      </div>
+
     </div>
   );
 }

@@ -35,15 +35,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ARAWA <i>food</i> MENU</h1>
-      <h3><i>....Fell free to search for any food you like....</i></h3>
-      <h3>Made by: <i class="san"><a href='https://www.linkedin.com/in/emmanuel-kipsang-b16951241/'>Kipsang</a></i></h3>
+      <h1 id="h1">ARAWA <i>food</i> MENU</h1>
+      <h3 id="h1"><i>....Fell free to search for any food you like....</i></h3>
+      <h3 id="h1">Made by: <i class="san"><a id="kip" href='https://www.linkedin.com/in/emmanuel-kipsang-b16951241/'>Kipsang</a></i></h3>
       <form onSubmit={getSearch} className="search-form">
-        <input 
-        className='search-bar' 
-        type="text" 
-        value={search} 
-        onChange={updateSearch}
+        <input
+          className='search-bar'
+          type="text"
+          value={search}
+          onChange={updateSearch}
         />
         <button className="search-button" type="submit">
           Search
@@ -51,12 +51,12 @@ function App() {
       </form>
       <div className='recipes'>
         {recipes.map(recipe => (
-          <Recipe 
-            title={recipe.recipe.label} 
+          <Recipe
+            title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
-            // ingredients={recipe.recipe.ingredients}
-            />
+          // ingredients={recipe.recipe.ingredients}
+          />
         ))}
       </div>
 
